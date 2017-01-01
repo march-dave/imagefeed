@@ -16,12 +16,9 @@ class Images extends Component {
     console.log('uploadFile: ')
     const image = files[0]
 
-    const cloudName = 'drrwovgv6'
-
     let cloudName = process.env.cloudName;
     let uploadPreset = process.env.uploadPreset;
-
-
+    
 
     let uploadRequest = superagent.post(url)
     uploadRequest.attach('file', image)

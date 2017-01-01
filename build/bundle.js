@@ -21512,7 +21512,7 @@
 /* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -21566,9 +21566,10 @@
 	      console.log('uploadFile: ');
 	      var image = files[0];
 	
-	      var cloudName = 'drrwovgv6';
+	      // const cloudName = 'drrwovgv6'
+	      var cloudName = process.env.cloudName;
+	      console.log('cloudName', cloudName);
 	
-	      // let cloudName = process.env.cloudName;
 	      // let uploadPreset = process.env.uploadPreset;
 	
 	      var url = 'https://api.cloudinary.com/v1_1/' + cloudName + '/image/upload';
@@ -21657,6 +21658,7 @@
 	}(_react.Component);
 	
 	exports.default = Images;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ },
 /* 179 */
