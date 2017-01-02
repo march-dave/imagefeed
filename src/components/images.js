@@ -17,9 +17,12 @@ class Images extends Component {
     const image = files[0]
 
     let cloudName = process.env.cloudName;
-    let uploadPreset = process.env.uploadPreset;
-    
+    // let uploadPreset = process.env.uploadPreset;
+    // const cloudName = 'drrwovgv6'
 
+    const url = 'https://api.cloudinary.com/v1_1/'+cloudName+'/image/upload'
+
+    
     let uploadRequest = superagent.post(url)
     uploadRequest.attach('file', image)
 

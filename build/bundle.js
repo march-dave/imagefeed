@@ -21566,11 +21566,9 @@
 	      console.log('uploadFile: ');
 	      var image = files[0];
 	
-	      // const cloudName = 'drrwovgv6'
 	      var cloudName = process.env.cloudName;
-	      console.log('cloudName', cloudName);
-	
 	      // let uploadPreset = process.env.uploadPreset;
+	      // const cloudName = 'drrwovgv6'
 	
 	      var url = 'https://api.cloudinary.com/v1_1/' + cloudName + '/image/upload';
 	
