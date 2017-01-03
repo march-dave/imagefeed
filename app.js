@@ -1,5 +1,8 @@
 require('dotenv').load();
 
+var Server = require('server');
+var webpack = require('webpack');
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
