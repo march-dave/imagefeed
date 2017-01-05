@@ -16,7 +16,6 @@ class Images extends Component {
     console.log('uploadFile: ')
     const image = files[0]
 
-    let cloudName = process.env.cloudName;
     
 
     let uploadRequest = superagent.post(url)
