@@ -16,7 +16,26 @@ class Images extends Component {
     console.log('uploadFile: ')
     const image = files[0]
 
-    
+    // const cloudName = process.env.CLOUDNAME;
+    // let uploadPreset = process.env.uploadPreset;
+    const cloudName = 'drrwovgv6'
+
+    console.log('cloudName', cloudName);
+
+    const url = 'https://api.cloudinary.com/v1_1/'+cloudName+'/image/upload'
+
+    const timestamp = Date.now()/1000
+    const uploadPreset = 'pyqns2d2'
+
+    const paramStr = 'timestamp='+timestamp+'&upload_preset='+uploadPreset+'VwFJV9ezfs248HJhIHxDV2KTjjM'
+
+    const signature = sha1(paramStr)
+    const params = {
+      'api_key': '126798455251844',
+      'timestamp': timestamp,
+      'upload_preset': uploadPreset,
+      'signature': signature
+    }
 
     let uploadRequest = superagent.post(url)
     uploadRequest.attach('file', image)
