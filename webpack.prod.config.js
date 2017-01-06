@@ -33,6 +33,9 @@ module.exports = {
     loaders: [
       { test: /\.js?$/,
         loader: 'babel',
+        query: {
+            presets: ['es2015', 'react']
+        },
         include: path.join(__dirname, 'src') },
       { test: /\.scss?$/,
         loader: 'style!css!sass',
