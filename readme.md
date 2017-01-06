@@ -1,4 +1,4 @@
 https://quiet-wildwood-72455.herokuapp.com/
 
 
-webpack.dev.config.js -y
+webpack --config ./webpack.prod.config.js --progress --colors
